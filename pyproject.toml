@@ -1,0 +1,15 @@
+[project]
+name = "reachy-mini-sim"
+version = "0.1.0"
+description = "Pinned environment running the Reachy Mini daemon in MuJoCo simulation"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "reachy-mini[mujoco]>=1.9,<2",
+]
+
+# This project ships no code of its own: it exists to pin one reproducible
+# daemon environment via uv.lock. Nothing here is built or installed as a
+# package, so uv is told not to try.
+[tool.uv]
+package = false
